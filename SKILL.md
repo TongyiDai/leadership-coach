@@ -46,9 +46,13 @@ Agent 无关：任何能跑 `lark-cli` 和 Python3 的宿主（TRAE / Claude Cod
 
 ## 阶段 0 · 身份与边界闸门
 
-1. 运行 `python3 scripts/doctor.py --live`（内部调用 `scripts/lark_identity_probe.py`）。要求 `identity=user`、`verified=true`；不满足则停止并说明。全程 `--as user`。
+1. 运行 `python3 scripts/doctor.py --live`（内部调用 `scripts/lark_identity_probe.py`）。**门禁看 `ready_for_core_scan` 而非死磕 `verified=true`**：
+   - 若 CLI 有 `auth status`：要求 `identity=user` 且 `verified=true`。
+   - 若 CLI **没有 `auth status`**（很多构建如此）：探针走兼容路径，`auth status` 永远给不出 `verified=true`——此时只要 `identity_assurance` 为 `resolved`（`contact +get-user` 确认了本人身份）或 `user_context`（任务金丝雀确认了 user 上下文），且 `ready_for_core_scan=true`，就**继续**，不要卡死。真正的权限在阶段 2 逐源试探。
+   - 只有 `ready_for_core_scan=false`（探针完全失败、非 user 身份、或 CLI 不可用）才停止并说明。全程 `--as user`。
 2. 先 `lark-cli contact +get-user --as user` 拿到**本人 open_id 与显示名**，后续 OKR、会议归属、发言匹配都要用。
-3. 向用户复述一句边界（仅本人自读、不进绩效），确认后继续。
+3. `doctor.py` 的 `ready_for_full_scan:false` 是**预期常态**，不是错误：无 `auth status` 的构建拿不到 scope 清单，doctor 无法预判各源权限，只能在阶段 2 实际取证时逐个试探（会议逐字/OKR 能不能读，第一次真跑才知道）。据此告知用户"先跑起来、缺权限再补授权"，不要因为 `full_scan:false` 就停。
+4. 向用户复述一句边界（仅本人自读、不进绩效），确认后继续。
 
 ## 阶段 1 · 开场多轮对齐（教练契约）
 
@@ -107,7 +111,7 @@ Agent 无关：任何能跑 `lark-cli` 和 Python3 的宿主（TRAE / Claude Cod
 
 详见 `references/periodic-review.md`。要点：
 
-- 排期存在私有状态 `schedule`（默认 `报告时间 10:30 / 周一 / Asia/Shanghai`）；宿主 agent 用它自己的定时/自动化能力在周一上午触发本 skill（本 skill 不自带常驻进程）。
+- 排期存在私有状态 `schedule`（默认 `报告时间 10:30 / 周一 / Asia/Shanghai`）。**注意：写进 `schedule` 只是记录意图，不会自动触发。** 用户要开启定期复盘时，agent **必须实际调用宿主的 automation 工具**创建"每周一 10:30 用领导力陪练做上周复盘"的循环任务，并回读确认任务已建、下次触发时间；若宿主无法唤起 agent（纯 cron 跑不了推理），如实告知"未能自动拉起、需手动触发"，不得默认已生效。
 - 触发后走"定期复盘模式"：跳过多轮对齐，时间窗取上一周（`state.py window` 从 `last_success_at` 起算），只诊断上周新增的领导力证据，并与上次诊断对比"最该改的一件事"是否改善。
 - 每次成功后 `state.py mark-success` 推进检查点并存去标识指纹，避免下周重复分析同一场会。
 

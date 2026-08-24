@@ -73,7 +73,10 @@ python3 scripts/state.py init --report-time 10:30 --timezone Asia/Shanghai --wee
 python3 scripts/state.py set-intent --direction "跨部门推动" --stage "个人贡献者" --scene-tag "跨部门争取资源未果" --confirm
 
 # 4. 从会议逐字记录抽取本人发言（他人自动去标识）
-cat transcript.json | python3 scripts/extract_speaker_turns.py --me "你的显示名" --me-id "ou_xxx"
+#    lark-cli 的逐字稿是纯文本文件，先转 JSON 再抽取：
+cat ./minutes/<token>/transcript.txt \
+  | python3 scripts/transcript_to_json.py \
+  | python3 scripts/extract_speaker_turns.py --me "你的显示名" --me-id "ou_xxx"
 ```
 
 然后对宿主 agent 说"用领导力陪练帮我复盘一下最近的表现"，它会按 `SKILL.md` 走完流程。要每周自动复盘，就用宿主的定时/自动化能力，在周一 10:30 触发同一句话。
@@ -107,6 +110,7 @@ cat transcript.json | python3 scripts/extract_speaker_turns.py --me "你的显�
 | `references/output-template.md` | 诊断报告成品模板 |
 | `scripts/doctor.py` | 只读健康检查 |
 | `scripts/lark_identity_probe.py` | 只读身份探针（带 profile 兼容回退） |
+| `scripts/transcript_to_json.py` | 纯文本逐字稿 → 说话人 JSON（接 extract） |
 | `scripts/extract_speaker_turns.py` | 从逐字记录抽本人发言、去标识他人 |
 | `scripts/state.py` | 隐私最小化私有状态 |
 
