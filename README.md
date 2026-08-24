@@ -100,6 +100,7 @@ cat transcript.json | python3 scripts/extract_speaker_turns.py --me "你的显�
 | `references/collection-playbook.md` | 各证据源的 lark-cli 取证命令与实测坑 |
 | `references/frameworks.md` | 五个领导力框架的诊断信号与改进方向 |
 | `references/diagnosis-rubric.md` | 诊断卡、评分口径、证据分级 |
+| `references/reading-list.md` | 方向对口的经典书推荐（关键节点点一本） |
 | `references/sparring.md` | 情景演练 + GROW 拉底式教练机制 |
 | `references/periodic-review.md` | 每周定期复盘的排期与增量逻辑 |
 | `references/privacy.md` | 隐私与威胁边界 |
