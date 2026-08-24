@@ -41,7 +41,7 @@ class StateError(ValueError):
 
 def default_path() -> Path:
     configured = os.environ.get("LEADERSHIP_COACH_STATE_PATH")
-    return Path(configured).expanduser() if configured else Path.home() / ".codex" / "leadership-coach" / "state.json"
+    return Path(configured).expanduser() if configured else Path.home() / ".leadership-coach" / "state.json"
 
 
 def parse_rfc3339(value: str) -> datetime:

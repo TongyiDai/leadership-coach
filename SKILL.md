@@ -18,7 +18,7 @@ description: |
 
 给**任何想变得更有影响力的人**一个私密的领导力陪练——不只是管理者，也包括还没有下属的普通员工。领导力不等于职级：无正式职权时，它体现在你怎么向上沟通、怎么推动跨部门协作、怎么在会上表达和说服、怎么给同事反馈、怎么带着人把事做成。它不靠自评问卷，而是读**你本人真实的工作证据**——尤其是周会等重要会议上你自己的发言——用成熟的领导力框架照出你的盲点，给出能落地的改进动作，然后陪你把薄弱项练到会。
 
-Agent 无关：任何能跑 `lark-cli` 和 Python3 的宿主（TRAE / Claude Code / Codex / Cursor）都能用。所有飞书读取统一路由到本机 `lark-*` 域 skill，不硬编码可能过期的 CLI 参数。
+Agent 无关：任何能跑 `lark-cli` 和 Python 3.9+ 的宿主（TRAE / Claude Code / Codex / Cursor 等）都能用。所有飞书读取统一路由到本机 `lark-*` 域 skill，不硬编码可能过期的 CLI 参数。
 
 > 术语说明：下文为简洁沿用"领导力"一词，但它对个人贡献者同样成立——凡提到"团队/下属"的地方，个人贡献者可代入"协作方/被你影响的人/项目伙伴"。诊断只看你本人的行为，不因你有没有下属而改变。
 
@@ -113,11 +113,11 @@ Agent 无关：任何能跑 `lark-cli` 和 Python3 的宿主（TRAE / Claude Cod
 ## 落盘与记忆（可选，需用户同意）
 
 - 诊断报告默认落 `outputs/领导力诊断-<日期>.md`（若无 `outputs/` 约定则询问）；去标识、无过程叙述。
-- 用户明确要"你记住"时，才写一条记忆锚点到 `${TRAE_HOME:-$HOME/.trae}/cli/memories/extensions/ad_hoc/notes/<timestamp>-leadership-coach.md`，只存抽象锚点（提升方向 / 当前阶段 / 上次诊断日期 / 报告路径 / 下次刷新），绝不落原始飞书数据。支持周期重跑 → 对比上次 → 确认后刷新。
+- 用户明确要"你记住"时，才写一条记忆锚点，只存抽象锚点（提升方向 / 当前阶段 / 上次诊断日期 / 报告路径 / 下次刷新），绝不落原始飞书数据。**写到宿主 agent 自己的记忆/笔记位置**（因 agent 而异）：TRAE 走 `${TRAE_HOME:-$HOME/.trae}/cli/memories/extensions/ad_hoc/notes/`、Claude Code 走 `CLAUDE.md` 或其记忆机制、其他 agent 用它各自的持久记忆约定；没有记忆机制的宿主就写进 `outputs/` 旁的锚点文件。支持周期重跑 → 对比上次 → 确认后刷新。
 
 ## 隐私与状态
 
-见 `references/privacy.md`。原则：会议正文、发言原文、人员/文档标识只在进程内处理；长期私有状态（`~/.codex/leadership-coach/state.json`，`0600`）只存提升方向、当前阶段、时间窗、去标识指纹，任何 raw ID/正文/token 落盘都是 schema 违规。
+见 `references/privacy.md`。原则：会议正文、发言原文、人员/文档标识只在进程内处理；长期私有状态（默认 `~/.leadership-coach/state.json`，可用 `LEADERSHIP_COACH_STATE_PATH` 覆盖，`0600`）只存提升方向、当前阶段、时间窗、去标识指纹，任何 raw ID/正文/token 落盘都是 schema 违规。
 
 ## 定期复盘（默认每周一 10:30）
 

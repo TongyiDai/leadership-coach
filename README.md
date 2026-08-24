@@ -19,7 +19,7 @@
 
 它还能**定期自动复盘**：默认每周一上午 10:30，复盘你上一周的领导力表现，并对比"上次最该改的一件事"有没有改善。
 
-Agent 无关：任何能跑 `lark-cli` 和 Python 3 的宿主（TRAE / Claude Code / Codex / Cursor）都可用。
+Agent 无关：任何能跑 `lark-cli` 和 Python 3.9+ 的宿主（TRAE / Claude Code / Codex / Cursor 等）都可用。
 
 <p align="center">
   <img src="assets/boards/coaching-loop.svg" width="90%" alt="领导力陪练闭环：对齐 → 取证 → 诊断 → 陪练 → 再回看"/>
@@ -99,7 +99,7 @@ cat ./minutes/<token>/transcript.txt \
 
 - **仅本人自读、自愿自助**：只处理当前登录用户本人的数据，结论只回本人。
 - 会议里他人发言只用于还原上下文，进入分析前一律去标识。
-- 长期状态（`~/.codex/leadership-coach/state.json`，`0600`）只存提升方向、阶段、时间窗、去标识指纹；任何原始 ID / 正文 / token 落盘都是 schema 违规。
+- 长期状态（默认 `~/.leadership-coach/state.json`，可用 `LEADERSHIP_COACH_STATE_PATH` 覆盖，`0600`）只存提升方向、阶段、时间窗、去标识指纹；任何原始 ID / 正文 / token 落盘都是 schema 违规。
 - **不用于**员工监控、HR 绩效评估、晋升/调薪/离职决策、招聘、教育测评或对任何第三方的画像。
 
 <p align="center">

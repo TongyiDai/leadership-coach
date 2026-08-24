@@ -16,7 +16,7 @@ python3 scripts/state.py init --report-time 10:30 --timezone Asia/Shanghai --wee
 
 **关键**：定期复盘要跑，必须真的注册一个定时任务——写进 `state.schedule` 只是记录意图，不会自己触发。而且这个任务要唤起的是**一个 LLM agent 走完整个 skill**（不是跑一个脚本就完事），所以：
 
-- **首选：宿主的原生 automation / 定时任务能力**（Codex/桌面版有 automation，能定期唤起 agent）。开启定期复盘时，agent **必须实际调用宿主的 automation 工具**创建一个循环任务，而不是只在嘴上说"交给宿主"。任务内容 = "每周一 10:30（Asia/Shanghai）用领导力陪练做上一周的定期复盘"。创建后向用户回读确认任务已建立、下次触发时间。
+- **首选：宿主的原生 automation / 定时任务能力**（能定期唤起 agent 的那种，如 Codex 桌面版的 automation、或其他 agent 的等价机制）。开启定期复盘时，agent **必须实际调用宿主的 automation 工具**创建一个循环任务，而不是只在嘴上说"交给宿主"。任务内容 = "每周一 10:30（Asia/Shanghai）用领导力陪练做上一周的定期复盘"。创建后向用户回读确认任务已建立、下次触发时间。
 - **纯脚本 cron 不够**：`cron` 只能跑命令、跑不了"agent 读证据→诊断→写报告"这套推理。若宿主没有能唤起 agent 的 automation，就**不要假装已排期**——如实告诉用户当前环境无法自动拉起，退回手动模式。
 - **兜底：手动**：用户每周一说一句"跑一下这周的领导力复盘"，效果相同。
 
