@@ -38,6 +38,8 @@ Agent 无关：任何能跑 `lark-cli` 和 Python 3 的宿主（TRAE / Claude Co
 3. 用 GROW / SCARF / Radical Candor / 情境领导 / SBI 照出问题；
 4. 每条结论都挂**真实发言证据 + 框架归因 + 可落地动作**。
 
+它还能帮你**在身边找个活榜样**：针对你薄弱的方向，从你们一起开过的会里，找出别人做得好的**具体做法和真实场景**，翻译成你下次能直接试的动作——只学正向行为，不给任何人打分或画像（见 `references/role-model.md`）。
+
 > 领导力 = 影响力。有下属就代入"下属/团队"，没下属就代入"协作方/跨部门伙伴/上级/项目里被你带的人"——诊断只看你本人的行为，不因你有没有下属而改变。
 
 ## 五阶段流程
@@ -47,6 +49,7 @@ Agent 无关：任何能跑 `lark-cli` 和 Python 3 的宿主（TRAE / Claude Co
 阶段1 开场多轮对齐   —— 先说清想练什么方向、当前什么阶段、哪个真实场景（定期复盘模式跳过）
 阶段2 建立领导力工作地图（先给你确认）—— 会议发言为首要证据源
 阶段3 领导力诊断（核心特色）
+阶段3.5 榜样片段（可选）—— 从共同会议里找别人做得好的可学做法
 阶段4 陪练（可选）—— 情景演练 / GROW 拉底式教练
 ```
 
@@ -103,6 +106,7 @@ cat ./minutes/<token>/transcript.txt \
 | `references/collection-playbook.md` | 各证据源的 lark-cli 取证命令与实测坑 |
 | `references/frameworks.md` | 五个领导力框架的诊断信号与改进方向 |
 | `references/diagnosis-rubric.md` | 诊断卡、评分口径、证据分级 |
+| `references/role-model.md` | 榜样片段：从共同会议找他人正向可学行为 |
 | `references/reading-list.md` | 方向对口的经典书推荐（关键节点点一本） |
 | `references/sparring.md` | 情景演练 + GROW 拉底式教练机制 |
 | `references/periodic-review.md` | 每周定期复盘的排期与增量逻辑 |
