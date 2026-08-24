@@ -1,0 +1,4 @@
+interface:
+  display_name: "领导力陪练"
+  short_description: "读你在会上的真实发言，照出领导力盲点，陪你练到会"
+  default_prompt: "Use $leadership-coach to first align with me on which leadership dimension I want to grow, my current stage as a manager, and a real recent scenario; then verify my Feishu identity and read my own work evidence — above all my own speaking turns in weekly team meetings and other important meeting transcripts, plus my OKRs, key messages I sent, docs I authored, and my tasks — and diagnose my leadership blind spots with GROW / SCARF / Radical Candor / Situational Leadership / SBI, giving me actionable improvements. Optionally run a role-play sparring session or GROW ask-not-tell coaching based on the diagnosis. Only read my own data; never profile my reports and never produce performance, promotion, or attrition judgments."

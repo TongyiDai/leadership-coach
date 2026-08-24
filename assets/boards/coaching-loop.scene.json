@@ -1,0 +1,17 @@
+{
+  "canvas": {"width": 1200, "height": 675, "ratio": "16:9", "background": "#FFFFFF", "grid": 8},
+  "intent": {"core_message": "领导力陪练是一个对齐→取证→诊断→陪练→回看的持续闭环", "composition": "axis-flow", "focus_node": "diagnose"},
+  "style": {"theme": "geometry-minimal", "accent_color": "#2F6BFF", "line_weight": 1, "corner_radius": 0},
+  "nodes": [
+    {"id": "align", "type": "point", "label": "对齐", "importance": 3},
+    {"id": "collect", "type": "point", "label": "取证", "importance": 4},
+    {"id": "diagnose", "type": "circle", "label": "诊断", "importance": 5},
+    {"id": "spar", "type": "point", "label": "陪练", "importance": 4}
+  ],
+  "edges": [
+    {"from": "align", "to": "collect", "relation": "定靶子"},
+    {"from": "collect", "to": "diagnose", "relation": "喂证据"},
+    {"from": "diagnose", "to": "spar", "relation": "驱动演练"},
+    {"from": "spar", "to": "align", "relation": "再回看", "style": "dashed"}
+  ]
+}

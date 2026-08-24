@@ -1,0 +1,15 @@
+{
+  "canvas": {"width": 1200, "height": 675, "ratio": "16:9", "background": "#FFFFFF", "grid": 8},
+  "intent": {"core_message": "五个成熟框架作为诊断透镜，按选定方向挑相关的用", "composition": "row-of-peers", "focus_node": "sbi"},
+  "style": {"theme": "geometry-minimal", "accent_color": "#2F6BFF", "line_weight": 1, "corner_radius": 0},
+  "nodes": [
+    {"id": "grow", "type": "circle", "label": "GROW · 对话结构", "importance": 4},
+    {"id": "scarf", "type": "circle", "label": "SCARF · 社交威胁/奖赏", "importance": 4},
+    {"id": "candor", "type": "circle", "label": "Radical Candor · 反馈两维", "importance": 4},
+    {"id": "situational", "type": "circle", "label": "情境领导 · 按成熟度切换", "importance": 3},
+    {"id": "sbi", "type": "rect", "label": "SBI · 情境-行为-影响", "importance": 5}
+  ],
+  "edges": [
+    {"from": "candor", "to": "sbi", "relation": "反馈落到可改行为"}
+  ]
+}

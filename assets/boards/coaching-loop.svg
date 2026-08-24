@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#222"/></marker><marker id="blueArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#2F6BFF"/></marker></defs>
+  <rect width="1200" height="675" fill="#fff"/>
+  <g font-family="PingFang SC, Source Han Sans SC, Arial, sans-serif">
+    <text x="88" y="70" fill="#111" font-size="32" font-weight="600">领导力陪练：诊断—练习闭环</text>
+    <text x="88" y="102" fill="#666" font-size="16">读真实发言，照出盲点，练到会，再回看</text>
+    <line x1="88" y1="130" x2="1112" y2="130" stroke="#E8E8E8"/>
+    <line x1="160" y1="370" x2="1040" y2="370" stroke="#222"/>
+    <path d="M232 370C280 322 332 322 380 370" fill="none" stroke="#222" marker-end="url(#arrow)"/><path d="M532 370C580 322 632 322 680 370" fill="none" stroke="#222" marker-end="url(#arrow)"/><path d="M812 370C860 322 912 322 960 370" fill="none" stroke="#222" marker-end="url(#arrow)"/>
+    <circle cx="180" cy="370" r="8" fill="#222"/><text x="180" y="306" text-anchor="middle" fill="#111" font-size="18">对齐</text><text x="180" y="332" text-anchor="middle" fill="#999" font-size="12">方向 · 阶段 · 场景</text>
+    <circle cx="456" cy="370" r="8" fill="#222"/><text x="456" y="306" text-anchor="middle" fill="#111" font-size="18">取证</text><text x="456" y="332" text-anchor="middle" fill="#999" font-size="12">会议发言为主</text>
+    <circle cx="736" cy="370" r="58" fill="#fff" stroke="#2F6BFF" stroke-width="1.5"/><text x="736" y="364" text-anchor="middle" fill="#111" font-size="19" font-weight="600">诊断</text><text x="736" y="390" text-anchor="middle" fill="#666" font-size="12">框架归因 · 改进</text>
+    <circle cx="1040" cy="370" r="42" fill="#fff" stroke="#2F6BFF" stroke-width="1.5"/><text x="1040" y="364" text-anchor="middle" fill="#111" font-size="17" font-weight="600">陪练</text><text x="1040" y="390" text-anchor="middle" fill="#666" font-size="12">演练 · 教练</text>
+    <path d="M1040 424C1020 560 300 572 180 424" fill="none" stroke="#2F6BFF" stroke-width="1.5" stroke-dasharray="7 7" marker-end="url(#blueArrow)"/>
+    <text x="600" y="590" text-anchor="middle" fill="#999" font-size="14">对齐 → 取证 → 诊断 → 陪练 → 再回看</text>
+  </g>
+</svg>
