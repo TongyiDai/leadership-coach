@@ -3,7 +3,7 @@
 —— Bill Gates, TED 2013《Teachers need real feedback》
 </blockquote>
 
-# 领导力陪练 · Leadership Coach
+<h1 align="center">领导力陪练 · Leadership Coach</h1>
 
 <p align="center">
   <img src="https://img.shields.io/badge/type-agent--skill-2F6BFF" alt="type: agent skill"/>
