@@ -6,6 +6,7 @@
 <h1 align="center">领导力陪练 · Leadership Coach</h1>
 
 <p align="center">
+  <a href="https://github.com/TongyiDai/leadership-coach/actions/workflows/ci.yml"><img src="https://github.com/TongyiDai/leadership-coach/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <img src="https://img.shields.io/badge/type-agent--skill-2F6BFF" alt="type: agent skill"/>
   <img src="https://img.shields.io/badge/agent-agnostic-2F6BFF" alt="agent agnostic"/>
   <img src="https://img.shields.io/badge/privacy-self--only-111111" alt="privacy: self-only"/>
