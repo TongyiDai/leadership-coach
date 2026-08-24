@@ -31,7 +31,8 @@ SENSITIVE_VALUE_RE = re.compile(
     re.IGNORECASE,
 )
 
-STAGES = ("新任管理者", "一线带人", "带团队的团队", "战略型领导")
+STAGES = ("个人贡献者", "新任管理者", "一线带人", "带团队的团队", "战略型领导")
+WEEKDAYS = ("mon", "tue", "wed", "thu", "fri", "sat", "sun")
 
 
 class StateError(ValueError):
@@ -65,13 +66,15 @@ def ensure_timezone(value: str) -> ZoneInfo:
         raise StateError(f"unknown IANA timezone: {value}") from exc
 
 
-def initial_state(report_time: str, timezone: str) -> dict[str, Any]:
+def initial_state(report_time: str, timezone: str, weekday: str | None = None) -> dict[str, Any]:
     if not TIME_RE.match(report_time):
         raise StateError("report_time must use HH:MM")
     ensure_timezone(timezone)
+    if weekday is not None and weekday not in WEEKDAYS:
+        raise StateError(f"weekday must be one of {WEEKDAYS}")
     return {
         "schema_version": SCHEMA_VERSION,
-        "schedule": {"report_time": report_time, "timezone": timezone},
+        "schedule": {"report_time": report_time, "timezone": timezone, "weekday": weekday or "mon"},
         "intent": {
             "confirmed": False,
             "directions": [],
@@ -102,6 +105,9 @@ def validate_state(state: dict[str, Any]) -> None:
     if not isinstance(schedule, dict) or not TIME_RE.match(str(schedule.get("report_time", ""))):
         raise StateError("schedule.report_time must use HH:MM")
     ensure_timezone(str(schedule.get("timezone", "")))
+    weekday = schedule.get("weekday")
+    if weekday is not None and weekday not in WEEKDAYS:
+        raise StateError(f"schedule.weekday must be one of {WEEKDAYS} or null")
     if not isinstance(intent, dict) or not isinstance(intent.get("confirmed"), bool):
         raise StateError("intent.confirmed must be boolean")
     directions = intent.get("directions")
@@ -159,7 +165,7 @@ def command_init(args: argparse.Namespace) -> int:
         load_state(path)
         print(json.dumps({"ok": True, "created": False, "path": str(path)}, ensure_ascii=False))
         return 0
-    atomic_write(path, initial_state(args.report_time, args.timezone))
+    atomic_write(path, initial_state(args.report_time, args.timezone, args.weekday))
     print(json.dumps({"ok": True, "created": True, "path": str(path)}, ensure_ascii=False))
     return 0
 
@@ -256,6 +262,7 @@ def parser() -> argparse.ArgumentParser:
     init = commands.add_parser("init")
     init.add_argument("--report-time", required=True)
     init.add_argument("--timezone", required=True)
+    init.add_argument("--weekday", help="mon..sun; scheduling metadata for the host, default mon")
     init.add_argument("--force", action="store_true")
     init.set_defaults(func=command_init)
 

@@ -15,7 +15,9 @@
 
 **读你在会上的真实发言，照出领导力盲点，陪你练到会。**
 
-一个给管理者的私密 AI 领导力陪练。它不靠自评问卷，而是读你**本人真实的工作证据**——尤其是周会等重要会议上你自己的发言逐字记录——用成熟的领导力框架照出你在管理上的盲点，给出能马上用的改进动作，然后陪你把薄弱项练到会。
+一个面向**任何想变得更有影响力的人**的私密 AI 领导力陪练——不只是管理者，也包括还没有下属的普通员工/个人贡献者。领导力不等于职级：无正式职权时，它体现在你怎么向上沟通、怎么推动跨部门协作、怎么在会上表达和说服、怎么给同事反馈、怎么带着人把事做成。它不靠自评问卷，而是读你**本人真实的工作证据**——尤其是周会等重要会议上你自己的发言逐字记录——用成熟的领导力框架照出你的盲点，给出能马上用的改进动作，然后陪你把薄弱项练到会。
+
+它还能**定期自动复盘**：默认每周一上午 10:30，复盘你上一周的领导力表现，并对比"上次最该改的一件事"有没有改善。
 
 Agent 无关：任何能跑 `lark-cli` 和 Python 3 的宿主（TRAE / Claude Code / Codex / Cursor）都可用。
 
@@ -29,22 +31,26 @@ Agent 无关：任何能跑 `lark-cli` 和 Python 3 的宿主（TRAE / Claude Co
 
 ## 核心特色：从真实发言反推领导力问题
 
-会议逐字记录里你自己的发言，是领导风格最真实、最高密度的证据——比零散消息更能看出你怎么设目标、怎么给反馈、怎么处理不同意见、是下指令还是提问题。skill 会：
+会议逐字记录里你自己的发言，是你影响风格最真实、最高密度的证据——比零散消息更能看出你怎么设目标、怎么给反馈、怎么处理不同意见、是给结论还是提问题、能不能推动没有汇报关系的人。skill 会：
 
-1. 定位你的周会 / 评审 / 团队会；
+1. 定位你的周会 / 评审 / 项目会；
 2. 只抽出**你自己的发言轮次**（他人一律去标识为 `[对方]`）；
 3. 用 GROW / SCARF / Radical Candor / 情境领导 / SBI 照出问题；
 4. 每条结论都挂**真实发言证据 + 框架归因 + 可落地动作**。
+
+> 领导力 = 影响力。有下属就代入"下属/团队"，没下属就代入"协作方/跨部门伙伴/上级/项目里被你带的人"——诊断只看你本人的行为，不因你有没有下属而改变。
 
 ## 五阶段流程
 
 ```
 阶段0 身份与边界闸门
-阶段1 开场多轮对齐   —— 先说清想练什么方向、当前什么阶段、哪个真实场景
+阶段1 开场多轮对齐   —— 先说清想练什么方向、当前什么阶段、哪个真实场景（定期复盘模式跳过）
 阶段2 建立领导力工作地图（先给你确认）—— 会议发言为首要证据源
 阶段3 领导力诊断（核心特色）
 阶段4 陪练（可选）—— 情景演练 / GROW 拉底式教练
 ```
+
+两种运行模式：**首次/按需**走完整对齐；**定期复盘**（默认周一 10:30）跳过对齐，只诊断上一周新增证据并对比趋势，见 `references/periodic-review.md`。
 
 ## 挂载的成熟框架
 
@@ -60,17 +66,17 @@ Agent 无关：任何能跑 `lark-cli` 和 Python 3 的宿主（TRAE / Claude Co
 # 1. 只读健康检查（验证身份与可用证据源）
 python3 scripts/doctor.py --live
 
-# 2. 初始化私有状态（首次）
-python3 scripts/state.py init --report-time 18:00 --timezone Asia/Shanghai
+# 2. 初始化私有状态（首次；--weekday 可选，默认 mon）
+python3 scripts/state.py init --report-time 10:30 --timezone Asia/Shanghai --weekday mon
 
 # 3. 记录本次教练契约（阶段1对齐后）
-python3 scripts/state.py set-intent --direction "反馈与纠偏" --stage "一线带人" --scene-tag "季度复盘1对1" --confirm
+python3 scripts/state.py set-intent --direction "跨部门推动" --stage "个人贡献者" --scene-tag "跨部门争取资源未果" --confirm
 
 # 4. 从会议逐字记录抽取本人发言（他人自动去标识）
 cat transcript.json | python3 scripts/extract_speaker_turns.py --me "你的显示名" --me-id "ou_xxx"
 ```
 
-然后对宿主 agent 说"用领导力陪练帮我复盘一下最近的管理"，它会按 `SKILL.md` 走完流程。
+然后对宿主 agent 说"用领导力陪练帮我复盘一下最近的表现"，它会按 `SKILL.md` 走完流程。要每周自动复盘，就用宿主的定时/自动化能力，在周一 10:30 触发同一句话。
 
 ## 隐私
 
@@ -95,6 +101,7 @@ cat transcript.json | python3 scripts/extract_speaker_turns.py --me "你的显�
 | `references/frameworks.md` | 五个领导力框架的诊断信号与改进方向 |
 | `references/diagnosis-rubric.md` | 诊断卡、评分口径、证据分级 |
 | `references/sparring.md` | 情景演练 + GROW 拉底式教练机制 |
+| `references/periodic-review.md` | 每周定期复盘的排期与增量逻辑 |
 | `references/privacy.md` | 隐私与威胁边界 |
 | `references/output-template.md` | 诊断报告成品模板 |
 | `scripts/doctor.py` | 只读健康检查 |

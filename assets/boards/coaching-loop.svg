@@ -1,17 +1,50 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
-  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#222"/></marker><marker id="blueArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#2F6BFF"/></marker></defs>
-  <rect width="1200" height="675" fill="#fff"/>
+  <rect width="1200" height="675" fill="#FFFFFF"/>
   <g font-family="PingFang SC, Source Han Sans SC, Arial, sans-serif">
-    <text x="88" y="70" fill="#111" font-size="32" font-weight="600">领导力陪练：诊断—练习闭环</text>
-    <text x="88" y="102" fill="#666" font-size="16">读真实发言，照出盲点，练到会，再回看</text>
-    <line x1="88" y1="130" x2="1112" y2="130" stroke="#E8E8E8"/>
-    <line x1="160" y1="370" x2="1040" y2="370" stroke="#222"/>
-    <path d="M232 370C280 322 332 322 380 370" fill="none" stroke="#222" marker-end="url(#arrow)"/><path d="M532 370C580 322 632 322 680 370" fill="none" stroke="#222" marker-end="url(#arrow)"/><path d="M812 370C860 322 912 322 960 370" fill="none" stroke="#222" marker-end="url(#arrow)"/>
-    <circle cx="180" cy="370" r="8" fill="#222"/><text x="180" y="306" text-anchor="middle" fill="#111" font-size="18">对齐</text><text x="180" y="332" text-anchor="middle" fill="#999" font-size="12">方向 · 阶段 · 场景</text>
-    <circle cx="456" cy="370" r="8" fill="#222"/><text x="456" y="306" text-anchor="middle" fill="#111" font-size="18">取证</text><text x="456" y="332" text-anchor="middle" fill="#999" font-size="12">会议发言为主</text>
-    <circle cx="736" cy="370" r="58" fill="#fff" stroke="#2F6BFF" stroke-width="1.5"/><text x="736" y="364" text-anchor="middle" fill="#111" font-size="19" font-weight="600">诊断</text><text x="736" y="390" text-anchor="middle" fill="#666" font-size="12">框架归因 · 改进</text>
-    <circle cx="1040" cy="370" r="42" fill="#fff" stroke="#2F6BFF" stroke-width="1.5"/><text x="1040" y="364" text-anchor="middle" fill="#111" font-size="17" font-weight="600">陪练</text><text x="1040" y="390" text-anchor="middle" fill="#666" font-size="12">演练 · 教练</text>
-    <path d="M1040 424C1020 560 300 572 180 424" fill="none" stroke="#2F6BFF" stroke-width="1.5" stroke-dasharray="7 7" marker-end="url(#blueArrow)"/>
-    <text x="600" y="590" text-anchor="middle" fill="#999" font-size="14">对齐 → 取证 → 诊断 → 陪练 → 再回看</text>
+    <text x="80" y="88" fill="#D8000F" font-size="26" font-weight="800" letter-spacing="2">领导力陪练</text>
+    <text x="80" y="150" fill="#1C1410" font-size="52" font-weight="800">读真实发言，练到会</text>
+    <text x="80" y="188" fill="#1C1410" font-size="18">照出盲点 · 给可落地动作 · 每周复盘看趋势</text>
+    <rect x="80" y="208" width="120" height="6" fill="#D8000F"/>
+
+    <!-- five-step band -->
+    <g>
+      <rect x="80"  y="300" width="180" height="150" fill="#F5F2EF" stroke="#1C1410" stroke-width="2"/>
+      <rect x="290" y="300" width="180" height="150" fill="#F5F2EF" stroke="#1C1410" stroke-width="2"/>
+      <rect x="500" y="300" width="200" height="150" fill="#1C1410" stroke="#1C1410" stroke-width="2"/>
+      <rect x="730" y="300" width="180" height="150" fill="#F5F2EF" stroke="#1C1410" stroke-width="2"/>
+      <rect x="940" y="300" width="180" height="150" fill="#F5F2EF" stroke="#1C1410" stroke-width="2"/>
+
+      <text x="100" y="345" fill="#D8000F" font-size="30" font-weight="800">01</text>
+      <text x="100" y="392" fill="#1C1410" font-size="24" font-weight="700">对齐</text>
+      <text x="100" y="424" fill="#1C1410" font-size="14">方向·阶段·场景</text>
+
+      <text x="310" y="345" fill="#D8000F" font-size="30" font-weight="800">02</text>
+      <text x="310" y="392" fill="#1C1410" font-size="24" font-weight="700">取证</text>
+      <text x="310" y="424" fill="#1C1410" font-size="14">会议发言为主</text>
+
+      <text x="520" y="345" fill="#D8000F" font-size="30" font-weight="800">03</text>
+      <text x="520" y="392" fill="#FFFFFF" font-size="24" font-weight="800">诊断</text>
+      <text x="520" y="424" fill="#F5F2EF" font-size="14">框架归因·改进</text>
+
+      <text x="750" y="345" fill="#D8000F" font-size="30" font-weight="800">04</text>
+      <text x="750" y="392" fill="#1C1410" font-size="24" font-weight="700">陪练</text>
+      <text x="750" y="424" fill="#1C1410" font-size="14">演练·教练</text>
+
+      <text x="960" y="345" fill="#D8000F" font-size="30" font-weight="800">05</text>
+      <text x="960" y="392" fill="#1C1410" font-size="24" font-weight="700">复盘</text>
+      <text x="960" y="424" fill="#1C1410" font-size="14">每周·看趋势</text>
+
+      <text x="272" y="390" fill="#D8000F" font-size="26" font-weight="800">›</text>
+      <text x="482" y="390" fill="#D8000F" font-size="26" font-weight="800">›</text>
+      <text x="712" y="390" fill="#D8000F" font-size="26" font-weight="800">›</text>
+      <text x="922" y="390" fill="#D8000F" font-size="26" font-weight="800">›</text>
+    </g>
+
+    <!-- loop-back rule (red = active) -->
+    <path d="M1030 450 L1030 520 L170 520 L170 456" fill="none" stroke="#D8000F" stroke-width="3" stroke-dasharray="9 7"/>
+    <path d="M170 468 l-8 -16 l16 0 z" fill="#D8000F"/>
+    <text x="600" y="560" text-anchor="middle" fill="#1C1410" font-size="16" font-weight="600">每周一 10:30 · 复盘上一周 · 再回看</text>
+
+    <text x="80" y="640" fill="#1C1410" font-size="15">领导力 = 影响力：有下属代入团队，没下属代入协作方 / 上级 / 项目伙伴</text>
   </g>
 </svg>

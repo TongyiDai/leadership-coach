@@ -1,38 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
-  <rect width="1200" height="675" fill="#fff"/>
+  <rect width="1200" height="675" fill="#FFFFFF"/>
   <g font-family="PingFang SC, Source Han Sans SC, Arial, sans-serif">
-    <text x="88" y="70" fill="#111" font-size="32" font-weight="600">五个诊断透镜</text>
-    <text x="88" y="102" fill="#666" font-size="16">不自创模型，用成熟框架照出领导力问题</text>
-    <line x1="88" y1="130" x2="1112" y2="130" stroke="#E8E8E8"/>
+    <text x="80" y="88" fill="#D8000F" font-size="26" font-weight="800" letter-spacing="2">诊断透镜</text>
+    <text x="80" y="150" fill="#1C1410" font-size="52" font-weight="800">五个成熟框架</text>
+    <text x="80" y="188" fill="#1C1410" font-size="18">不自创模型 · 按你选定的方向挑相关的用</text>
+    <rect x="80" y="208" width="120" height="6" fill="#D8000F"/>
 
-    <circle cx="220" cy="300" r="70" fill="#fff" stroke="#2F6BFF" stroke-width="1.5"/>
-    <text x="220" y="294" text-anchor="middle" fill="#111" font-size="20" font-weight="600">GROW</text>
-    <text x="220" y="320" text-anchor="middle" fill="#666" font-size="12">对话结构</text>
-    <text x="220" y="400" text-anchor="middle" fill="#999" font-size="13">目标·现状·选项·行动</text>
+    <!-- four top panels -->
+    <g>
+      <rect x="80"  y="280" width="250" height="150" fill="#F5F2EF" stroke="#1C1410" stroke-width="2"/>
+      <rect x="360" y="280" width="250" height="150" fill="#F5F2EF" stroke="#1C1410" stroke-width="2"/>
+      <rect x="640" y="280" width="250" height="150" fill="#F5F2EF" stroke="#1C1410" stroke-width="2"/>
+      <rect x="920" y="280" width="200" height="150" fill="#F5F2EF" stroke="#1C1410" stroke-width="2"/>
 
-    <circle cx="480" cy="300" r="70" fill="#fff" stroke="#2F6BFF" stroke-width="1.5"/>
-    <text x="480" y="294" text-anchor="middle" fill="#111" font-size="20" font-weight="600">SCARF</text>
-    <text x="480" y="320" text-anchor="middle" fill="#666" font-size="12">社交威胁/奖赏</text>
-    <text x="480" y="400" text-anchor="middle" fill="#999" font-size="13">地位·确定·自主·归属·公平</text>
+      <text x="100" y="330" fill="#1C1410" font-size="30" font-weight="800">GROW</text>
+      <text x="100" y="366" fill="#D8000F" font-size="15" font-weight="700">对话结构</text>
+      <text x="100" y="402" fill="#1C1410" font-size="15">目标·现状·选项·行动</text>
 
-    <circle cx="740" cy="300" r="70" fill="#fff" stroke="#2F6BFF" stroke-width="1.5"/>
-    <text x="740" y="288" text-anchor="middle" fill="#111" font-size="18" font-weight="600">Radical</text>
-    <text x="740" y="310" text-anchor="middle" fill="#111" font-size="18" font-weight="600">Candor</text>
-    <text x="740" y="400" text-anchor="middle" fill="#999" font-size="13">真心关心×直接挑战</text>
+      <text x="380" y="330" fill="#1C1410" font-size="30" font-weight="800">SCARF</text>
+      <text x="380" y="366" fill="#D8000F" font-size="15" font-weight="700">社交威胁/奖赏</text>
+      <text x="380" y="402" fill="#1C1410" font-size="14">地位·确定·自主·归属·公平</text>
 
-    <circle cx="985" cy="300" r="70" fill="#fff" stroke="#222" stroke-width="1.2"/>
-    <text x="985" y="294" text-anchor="middle" fill="#111" font-size="18" font-weight="600">情境领导</text>
-    <text x="985" y="320" text-anchor="middle" fill="#666" font-size="12">按成熟度切换</text>
-    <text x="985" y="400" text-anchor="middle" fill="#999" font-size="13">指令·教练·支持·授权</text>
+      <text x="660" y="326" fill="#1C1410" font-size="27" font-weight="800">Radical</text>
+      <text x="660" y="356" fill="#1C1410" font-size="27" font-weight="800">Candor</text>
+      <text x="660" y="392" fill="#D8000F" font-size="15" font-weight="700">反馈两维度</text>
+      <text x="660" y="418" fill="#1C1410" font-size="14">真心关心×直接挑战</text>
 
-    <line x1="290" y1="300" x2="410" y2="300" stroke="#E0E0E0"/>
-    <line x1="550" y1="300" x2="670" y2="300" stroke="#E0E0E0"/>
-    <line x1="810" y1="300" x2="915" y2="300" stroke="#E0E0E0"/>
+      <text x="940" y="330" fill="#1C1410" font-size="28" font-weight="800">情境领导</text>
+      <text x="940" y="366" fill="#D8000F" font-size="15" font-weight="700">按成熟度切换</text>
+      <text x="940" y="402" fill="#1C1410" font-size="14">指令·教练·支持·授权</text>
+    </g>
 
-    <rect x="470" y="470" width="260" height="72" fill="#fff" stroke="#2F6BFF" stroke-width="1.5"/>
-    <text x="600" y="502" text-anchor="middle" fill="#111" font-size="18" font-weight="600">SBI</text>
-    <text x="600" y="526" text-anchor="middle" fill="#666" font-size="13">情境·行为·影响 —— 把反馈讲成可改的行为</text>
+    <!-- SBI full-bleed red statement panel -->
+    <rect x="80" y="470" width="1040" height="110" fill="#D8000F"/>
+    <text x="110" y="520" fill="#FFFFFF" font-size="32" font-weight="800">SBI</text>
+    <text x="110" y="556" fill="#FFFFFF" font-size="18">情境 · 行为 · 影响 —— 把反馈讲成可改的行为，不评判人</text>
 
-    <text x="600" y="600" text-anchor="middle" fill="#999" font-size="14">按你选定的方向，挑相关透镜重点用，不逐一套满</text>
+    <text x="80" y="632" fill="#1C1410" font-size="15">无职权也适用：GROW 帮人想清楚 · SCARF 解释为何抵触 · Candor/SBI 给任何人反馈 · 情境领导判断要多少指导</text>
   </g>
 </svg>

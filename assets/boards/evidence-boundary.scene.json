@@ -1,14 +1,55 @@
 {
-  "canvas": {"width": 1200, "height": 675, "ratio": "16:9", "background": "#FFFFFF", "grid": 8},
-  "intent": {"core_message": "本人证据经去标识进入分析，人事判断与原始数据落盘一律拦在红线外", "composition": "gate-flow", "focus_node": "deidentify"},
-  "style": {"theme": "geometry-minimal", "accent_color": "#2F6BFF", "line_weight": 1, "corner_radius": 0},
+  "canvas": {
+    "width": 1200,
+    "height": 675,
+    "ratio": "16:9",
+    "background": "#FFFFFF",
+    "grid": 8
+  },
+  "intent": {
+    "core_message": "本人证据经去标识进入分析，人事判断与原始数据落盘一律拦在红线外",
+    "composition": "gate-flow",
+    "focus_node": "deidentify"
+  },
+  "style": {
+    "theme": "bold-poster",
+    "accent_color": "#D8000F",
+    "line_weight": 1,
+    "corner_radius": 0,
+    "ink": "#1C1410",
+    "panel": "#F5F2EF"
+  },
   "nodes": [
-    {"id": "sources", "type": "rect", "label": "进得来：本人证据", "importance": 4},
-    {"id": "deidentify", "type": "circle", "label": "去标识闸门", "importance": 5},
-    {"id": "redline", "type": "rect", "label": "出不去：人事判断/原始落盘", "importance": 4}
+    {
+      "id": "sources",
+      "type": "rect",
+      "label": "进得来：本人证据",
+      "importance": 4
+    },
+    {
+      "id": "deidentify",
+      "type": "circle",
+      "label": "去标识闸门",
+      "importance": 5
+    },
+    {
+      "id": "redline",
+      "type": "rect",
+      "label": "出不去：人事判断/原始落盘",
+      "importance": 4
+    }
   ],
   "edges": [
-    {"from": "sources", "to": "deidentify", "relation": "他人→[对方]"},
-    {"from": "deidentify", "to": "redline", "relation": "拦截", "style": "blocked"}
+    {
+      "from": "sources",
+      "to": "deidentify",
+      "relation": "他人→[对方]"
+    },
+    {
+      "from": "deidentify",
+      "to": "redline",
+      "relation": "拦截",
+      "style": "blocked"
+    }
   ]
 }

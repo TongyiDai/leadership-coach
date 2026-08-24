@@ -1,39 +1,40 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
-  <defs><marker id="blueArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#2F6BFF"/></marker></defs>
-  <rect width="1200" height="675" fill="#fff"/>
+  <rect width="1200" height="675" fill="#FFFFFF"/>
   <g font-family="PingFang SC, Source Han Sans SC, Arial, sans-serif">
-    <text x="88" y="70" fill="#111" font-size="32" font-weight="600">证据与边界</text>
-    <text x="88" y="102" fill="#666" font-size="16">仅本人自读 · 他人去标识 · 不进人事流程</text>
-    <line x1="88" y1="130" x2="1112" y2="130" stroke="#E8E8E8"/>
+    <text x="80" y="88" fill="#D8000F" font-size="26" font-weight="800" letter-spacing="2">证据与边界</text>
+    <text x="80" y="150" fill="#1C1410" font-size="52" font-weight="800">只照自己，只给自己</text>
+    <text x="80" y="188" fill="#1C1410" font-size="18">仅本人自读 · 他人去标识 · 不进人事流程</text>
+    <rect x="80" y="208" width="120" height="6" fill="#D8000F"/>
 
-    <rect x="88" y="180" width="330" height="360" fill="#fff" stroke="#2F6BFF" stroke-width="1.5"/>
-    <text x="253" y="220" text-anchor="middle" fill="#111" font-size="19" font-weight="600">进得来（本人证据）</text>
-    <line x1="120" y1="240" x2="386" y2="240" stroke="#EEE"/>
-    <text x="120" y="278" fill="#333" font-size="15">· 本人在会上的发言（首要）</text>
-    <text x="120" y="314" fill="#333" font-size="15">· 本人的 OKR</text>
-    <text x="120" y="350" fill="#333" font-size="15">· 本人发出的关键沟通</text>
-    <text x="120" y="386" fill="#333" font-size="15">· 本人主编的文档</text>
-    <text x="120" y="422" fill="#333" font-size="15">· 本人指派/跟进的任务</text>
-    <text x="120" y="486" fill="#999" font-size="13">他人发言仅作上下文，</text>
-    <text x="120" y="510" fill="#999" font-size="13">进分析前一律替换为 [对方]</text>
+    <!-- IN panel -->
+    <rect x="80" y="280" width="440" height="300" fill="#F5F2EF" stroke="#1C1410" stroke-width="2"/>
+    <text x="108" y="330" fill="#1C1410" font-size="26" font-weight="800">进得来</text>
+    <text x="240" y="330" fill="#1C1410" font-size="16">本人证据</text>
+    <rect x="108" y="346" width="384" height="2" fill="#1C1410"/>
+    <text x="108" y="388" fill="#1C1410" font-size="17">· 本人在会上的发言（首要）</text>
+    <text x="108" y="424" fill="#1C1410" font-size="17">· 本人的 OKR / 关键沟通</text>
+    <text x="108" y="460" fill="#1C1410" font-size="17">· 本人主编的文档 / 任务</text>
+    <text x="108" y="520" fill="#D8000F" font-size="15" font-weight="700">他人发言仅作上下文</text>
+    <text x="108" y="548" fill="#1C1410" font-size="15">进分析前一律替换为 [对方]</text>
 
-    <circle cx="600" cy="360" r="66" fill="#fff" stroke="#2F6BFF" stroke-width="1.5"/>
-    <text x="600" y="354" text-anchor="middle" fill="#111" font-size="17" font-weight="600">去标识</text>
-    <text x="600" y="380" text-anchor="middle" fill="#666" font-size="12">只留本人语义</text>
-    <path d="M418 360L530 360" fill="none" stroke="#2F6BFF" stroke-width="1.5" marker-end="url(#blueArrow)"/>
-    <path d="M666 360L778 360" fill="none" stroke="#2F6BFF" stroke-width="1.5" marker-end="url(#blueArrow)"/>
+    <!-- gate -->
+    <rect x="545" y="392" width="110" height="76" fill="#D8000F"/>
+    <text x="600" y="428" text-anchor="middle" fill="#FFFFFF" font-size="18" font-weight="800">去标识</text>
+    <text x="600" y="452" text-anchor="middle" fill="#FFFFFF" font-size="12">只留本人语义</text>
+    <path d="M520 430 L545 430" stroke="#1C1410" stroke-width="3"/>
+    <path d="M655 430 L690 430" stroke="#1C1410" stroke-width="3"/>
 
-    <rect x="782" y="180" width="330" height="360" fill="#fff" stroke="#222" stroke-width="1.2"/>
-    <text x="947" y="220" text-anchor="middle" fill="#111" font-size="19" font-weight="600">出不去（红线）</text>
-    <line x1="814" y1="240" x2="1080" y2="240" stroke="#EEE"/>
-    <text x="814" y="278" fill="#333" font-size="15">✗ 对下属/他人做画像</text>
-    <text x="814" y="314" fill="#333" font-size="15">✗ 绩效 / 晋升 / 调薪判断</text>
-    <text x="814" y="350" fill="#333" font-size="15">✗ 离职预测</text>
-    <text x="814" y="386" fill="#333" font-size="15">✗ 员工监控 / HR 评估</text>
-    <text x="814" y="422" fill="#333" font-size="15">✗ 原始正文/ID/token 落盘</text>
-    <text x="814" y="486" fill="#999" font-size="13">长期状态只存方向/阶段/</text>
-    <text x="814" y="510" fill="#999" font-size="13">时间窗/去标识指纹（0600）</text>
+    <!-- OUT / red-line panel (dark ground) -->
+    <rect x="680" y="280" width="440" height="300" fill="#1C1410"/>
+    <text x="708" y="330" fill="#FFFFFF" font-size="26" font-weight="800">出不去</text>
+    <text x="840" y="330" fill="#D8000F" font-size="16" font-weight="700">红线</text>
+    <rect x="708" y="346" width="384" height="2" fill="#D8000F"/>
+    <text x="708" y="388" fill="#F5F2EF" font-size="17">✗ 对下属 / 他人做画像</text>
+    <text x="708" y="424" fill="#F5F2EF" font-size="17">✗ 绩效 / 晋升 / 调薪 / 离职判断</text>
+    <text x="708" y="460" fill="#F5F2EF" font-size="17">✗ 员工监控 / HR 评估</text>
+    <text x="708" y="496" fill="#F5F2EF" font-size="17">✗ 原始正文 / ID / token 落盘</text>
+    <text x="708" y="548" fill="#F5F2EF" font-size="14">长期状态只存方向/阶段/时间窗/指纹（0600）</text>
 
-    <text x="600" y="590" text-anchor="middle" fill="#999" font-size="14">只为管理者本人自愿的自我提升服务</text>
+    <text x="600" y="632" text-anchor="middle" fill="#1C1410" font-size="16" font-weight="600">只为本人自愿的自我提升服务</text>
   </g>
 </svg>
