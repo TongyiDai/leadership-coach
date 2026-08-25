@@ -3,10 +3,9 @@
 —— Bill Gates, TED 2013《Teachers need real feedback》
 </blockquote>
 
-<h1 align="center">领导力陪练 · Leadership Coach</h1>
+# 领导力陪练 · Leadership Coach
 
 <p align="center">
-  <a href="https://github.com/TongyiDai/leadership-coach/actions/workflows/ci.yml"><img src="https://github.com/TongyiDai/leadership-coach/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
   <img src="https://img.shields.io/badge/type-agent--skill-2F6BFF" alt="type: agent skill"/>
   <img src="https://img.shields.io/badge/agent-agnostic-2F6BFF" alt="agent agnostic"/>
   <img src="https://img.shields.io/badge/privacy-self--only-111111" alt="privacy: self-only"/>
@@ -33,7 +32,7 @@ Agent 无关：任何能跑 `lark-cli` 和 Python 3.9+ 的宿主（TRAE / Claude
 ## 为什么值得用｜核心价值
 
 1. **基于真实证据，不凭空臆测**——抓取飞书里你本人真实的会议逐字、OKR、关键沟通、文档作为分析对象，结论都挂得到原始出处，而不是套模板讲正确的废话。
-2. **给你一个身边的活榜样**——同样的工作场景里，从你共同参与的会议中找出在该领导力维度表现更好的同事、他的真实做法和原话，翻译成你能直接模仿的动作，便于代入理解和学习。
+2. **看到"这种情况怎么处理更好"**——同样的工作场景里，从你共同参与的会议中提炼同类情境下更好的处理方式、真实做法和原话，**全程脱敏、不点名**，翻译成你能直接模仿的动作。你要的是体感，不是知道谁做的——去掉姓名也避免同事间攀比。
 3. **定期自动复盘**——默认每周一 10:30 自动抓取过去一周的领导力表现，做增量诊断，并对比"上次最该改的一件事"是否改善，让提升成为习惯而非一次性。
 4. **多框架交叉诊断**——同一段发言用 GROW / SCARF / Radical Candor / 情境领导 / SBI 多个成熟透镜同时照，避免"一把锤子看什么都是钉子"的单一模型偏差。
 5. **证据分级、可追溯**——每条结论标注「事实 / 本人已表达 / 观察 / 待验证推断」，清楚区分"数据说的"和"我推断的"，不把猜测当结论。
@@ -50,7 +49,7 @@ Agent 无关：任何能跑 `lark-cli` 和 Python 3.9+ 的宿主（TRAE / Claude
 3. 用 GROW / SCARF / Radical Candor / 情境领导 / SBI 照出问题；
 4. 每条结论都挂**真实发言证据 + 框架归因 + 可落地动作**。
 
-它还能帮你**在身边找个活榜样**：针对你薄弱的方向，从你们一起开过的会里，找出别人做得好的**具体做法和真实场景**，翻译成你下次能直接试的动作——只学正向行为，不给任何人打分或画像（见 `references/role-model.md`）。
+它还能帮你看到**"这种情况怎么处理更好"**：针对你薄弱的方向，从你们一起开过的会里，提炼同类情境下更好的**处理方式和真实场景**，翻译成你下次能直接试的动作——**全程脱敏、不点名**，只学做法不比人（见 `references/role-model.md`）。
 
 > 领导力 = 影响力。有下属就代入"下属/团队"，没下属就代入"协作方/跨部门伙伴/上级/项目里被你带的人"——诊断只看你本人的行为，不因你有没有下属而改变。
 
@@ -61,7 +60,7 @@ Agent 无关：任何能跑 `lark-cli` 和 Python 3.9+ 的宿主（TRAE / Claude
 阶段1 开场多轮对齐   —— 先说清想练什么方向、当前什么阶段、哪个真实场景（定期复盘模式跳过）
 阶段2 建立领导力工作地图（先给你确认）—— 会议发言为首要证据源
 阶段3 领导力诊断（核心特色）
-阶段3.5 榜样片段（可选）—— 从共同会议里找别人做得好的可学做法
+阶段3.5 情境范本（可选）—— 从共同会议提炼同类情境更好的处理方式（脱敏不点名）
 阶段4 陪练（可选）—— 情景演练 / GROW 拉底式教练
 ```
 
@@ -118,7 +117,7 @@ cat ./minutes/<token>/transcript.txt \
 | `references/collection-playbook.md` | 各证据源的 lark-cli 取证命令与实测坑 |
 | `references/frameworks.md` | 五个领导力框架的诊断信号与改进方向 |
 | `references/diagnosis-rubric.md` | 诊断卡、评分口径、证据分级 |
-| `references/role-model.md` | 榜样片段：从共同会议找他人正向可学行为 |
+| `references/role-model.md` | 情境范本：从共同会议提炼同类情境更好处理（脱敏不点名） |
 | `references/reading-list.md` | 方向对口的经典书推荐（关键节点点一本） |
 | `references/sparring.md` | 情景演练 + GROW 拉底式教练机制 |
 | `references/periodic-review.md` | 每周定期复盘的排期与增量逻辑 |
